@@ -14,3 +14,21 @@ export const getUsersApi = async () => {
         console.log(err)
     }
 }
+
+export const getAlbumsApi = async (userId) => {
+    try {
+        const { data } = await axiosInstance.get(`${baseURL}/albums?userId=${userId}`)
+        return data
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+export const getPhotosApi = async (albumId) => {
+    try {
+        const { data } = await axiosInstance.get(`${baseURL}/photos?albumId=${albumId}`)
+        return data
+    } catch (err) {
+        console.log(err)
+    }
+}
