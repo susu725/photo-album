@@ -37,21 +37,23 @@ export default function Home() {
     return (
         <div className={styles.home}>
             <Navbar />
-            {user ?
-                <>
-                    <div className={styles.userInfo}>
-                        <h3>{user.name}</h3>
-                        <div className={styles.email}>
-                            <FontAwesomeIcon icon={faShare} className={styles.icon} />
-                            <p>{user.email}</p>
+            {
+                user ?
+                    <>
+                        <div className={styles.userInfo}>
+                            <h3>{user.name}</h3>
+                            <div className={styles.email}>
+                                <FontAwesomeIcon icon={faShare} className={styles.icon} />
+                                <p>{user.email}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        {albumsReander}
-                    </div>
-                </>
-                :
-                <div />}
+                        <div>
+                            {albumsReander}
+                        </div>
+                    </>
+                    :
+                    <div />
+            }
         </div>
     )
 }

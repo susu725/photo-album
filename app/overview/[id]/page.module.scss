@@ -1,0 +1,15 @@
+.overview {
+    width: 1920px;
+    height: 1080px;
+    background-color: #111111;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .photos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
