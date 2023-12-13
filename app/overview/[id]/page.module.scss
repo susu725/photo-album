@@ -14,3 +14,10 @@
         justify-content: center;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .overview {
+        width: 320px;
+        height: 680px;
+    }
+}
