@@ -30,6 +30,30 @@
                 cursor: pointer;
             }
         }
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .home {
+        width: 320px;
+        height: 680px;
+        align-items: flex-start;
+
+        .userInfo {
+            width: 320px;
+            height: 53px;
+            margin-bottom: 15px;
+            padding: 0px 15px;
+
+            h3 {
+                font-size: 18px;
+                line-height: 25.59px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 19.91px;
+            }
+        }
     }
 }

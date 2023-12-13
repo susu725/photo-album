@@ -41,3 +41,11 @@
         height: 20px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 320px;
+        height: 49px;
+        visibility: hidden;
+    }
+}

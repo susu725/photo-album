@@ -9,7 +9,6 @@ export default function Item({ photo }) {
     const { id, url } = photo
     const [isOpen, setIsOpen] = useState(false)
     const pathname = usePathname()
-    console.log(pathname)
 
     const handleOpen = () => {
         console.log('open')
