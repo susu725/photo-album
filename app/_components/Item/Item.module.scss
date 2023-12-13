@@ -1,0 +1,13 @@
+.item {
+    margin: 0px 10px;
+    cursor: pointer;
+
+    &:nth-of-type(1) {
+        margin-left: 0px;
+    }
+
+    img {
+        width: 455px;
+        height: 293px;
+    }
+}

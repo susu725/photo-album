@@ -1,9 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import Item from '../Item/Item';
+import { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { faCaretRight, faBookmark } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
+import Item from '../Item/Item'
 import styles from './List.module.scss'
-import { getPhotosApi } from '@/app/api/api';
+import { getPhotosApi } from '@/app/api/api'
 
 export default function List({ album }) {
     const { id, title } = album
@@ -28,8 +32,14 @@ export default function List({ album }) {
     }, [])
 
     return (
-        <div>
-            {photosReander}
+        <div className={styles.list}>
+            <Link href={`/overview/${id}`} className={styles.link}>
+                <FontAwesomeIcon icon={far.faBookmark} className={styles.icon} />
+                <p className={styles.title}>{title}</p>
+            </Link>
+            <div className={styles.photos}>
+                {photosReander}
+            </div>
         </div>
     )
 }

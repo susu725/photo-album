@@ -19,7 +19,7 @@ export default function Login() {
   const handleLogin = () => {
     users.map(user => {
       if (user.id === Number(userId)) {
-        localStorage.setItem('userId', userId)
+        localStorage.setItem('userInfo', JSON.stringify(user))
         router.push('/home')
       }
     })

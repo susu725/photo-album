@@ -4,11 +4,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     background-color: #111111;
     overflow: scroll;
 
     &::-webkit-scrollbar {
         display: none;
+    }
+
+    .userInfo {
+        width: 364px;
+        height: 95px;
+        color: #FFFFFF;
     }
 }
