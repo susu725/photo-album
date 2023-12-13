@@ -146,3 +146,12 @@ p {
   font-weight: 400;
   line-height: 25.59px;
 }
+
+@font-face {
+  font-family: 'Michroma-Regular';
+  src: url('../public/font/Michroma-Regular.woff') format('woff');
+}
+
+body * {
+  font-family: 'Michroma-Regular';
+}
