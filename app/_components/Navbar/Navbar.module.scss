@@ -1,0 +1,41 @@
+.navbar {
+    width: 1920px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    button {
+        color: #FFFFFF;
+        background-color: transparent;
+        border: 1px solid #FFFFFF;
+    }
+
+    .search,
+    .notify {
+        width: 50px;
+        height: 50px;
+    }
+
+    .navR {
+        display: flex;
+
+        .plus {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 236px;
+            height: 50px;
+            margin-right: 20px;
+
+            .icon {
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}
