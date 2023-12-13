@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { far } from '@fortawesome/free-regular-svg-icons'
-import { faCaretRight, faBookmark } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import Item from '../Item/Item'
 import styles from './List.module.scss'

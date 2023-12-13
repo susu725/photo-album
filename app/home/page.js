@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShare } from '@fortawesome/free-solid-svg-icons'
 import Navbar from '../_components/Navbar/Navbar';
 import List from '../_components/List/List'
 import styles from './page.module.scss'
@@ -35,7 +37,10 @@ export default function Home() {
             <Navbar />
             <div className={styles.userInfo}>
                 <h3>{name}</h3>
-                <p>{email}</p>
+                <div className={styles.email}>
+                    <FontAwesomeIcon icon={faShare} className={styles.icon} />
+                    <p>{email}</p>
+                </div>
             </div>
             <div>
                 {albumsReander}

@@ -4,11 +4,13 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    z-index: 1;
 
     button {
         color: #FFFFFF;
         background-color: transparent;
         border: 1px solid #FFFFFF;
+        cursor: pointer;
     }
 
     .search,
@@ -17,7 +19,7 @@
         height: 50px;
     }
 
-    .navR {
+    .functionList {
         display: flex;
 
         .plus {

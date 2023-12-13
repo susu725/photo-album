@@ -10,7 +10,7 @@ export default function Navbar() {
                     <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} />
                 </button>
             </div>
-            <div className={styles.navR}>
+            <div className={styles.functionList}>
                 <button className={styles.plus}>
                     <p>Submit a photo</p>
                     <FontAwesomeIcon icon={faPlus} className={styles.icon} />

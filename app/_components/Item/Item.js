@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react'
+import Modal from '../Modal/Modal';
 import styles from './Item.module.scss'
 
 export default function Item({ photo }) {
@@ -20,8 +21,9 @@ export default function Item({ photo }) {
 
     return (
         <div className={styles.item} onClick={handleOpen} >
-            <img src={url} alt='#' />
-            {/* {isOpen && (<Modal handleClose={handleClose} photo={photo} />)} */}
+            <img src={url} alt='#' className={styles.img} />
+            {isOpen && (<Modal handleClose={handleClose} photo={photo} />)}
+            <div className={isOpen ? styles.mask : ''} />
         </div>
     )
 }

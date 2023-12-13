@@ -14,6 +14,22 @@
     .userInfo {
         width: 364px;
         height: 95px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-shrink: 0;
         color: #FFFFFF;
+
+        .email {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-left: 10px;
+                border-bottom: 1px solid #FFFFFF;
+                cursor: pointer;
+            }
+        }
+
     }
 }
