@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react'
-import { useRouter, usePathname } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import Footer from './_components/Footer/Footer'
 import styles from './page.module.scss'
 import { getUsersApi } from './api/api'
@@ -10,7 +10,6 @@ export default function Login() {
   const [users, setUsers] = useState(null)
   const [userId, setUserId] = useState(null)
   const router = useRouter()
-  const pathname = usePathname()
 
   const handleInput = e => {
     setUserId(e.target.value)

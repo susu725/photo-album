@@ -3,19 +3,17 @@
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShare } from '@fortawesome/free-solid-svg-icons'
-import Navbar from '../_components/Navbar/Navbar';
+import Navbar from '../_components/Navbar/Navbar'
 import List from '../_components/List/List'
 import styles from './page.module.scss'
 import { getAlbumsApi } from '../api/api'
 
 export default function Home() {
+    const [user, setUser] = useState(null)
     const [albums, setAlbums] = useState(null)
 
-    const userInfo = localStorage?.getItem('userInfo')
-    const { id, name, email } = JSON.parse(userInfo)
-
     // 取得該使用者的所有相簿
-    const getAlbums = async () => {
+    const getAlbums = async (id) => {
         try {
             const albums = await getAlbumsApi(id)
             setAlbums(albums)
@@ -29,22 +27,31 @@ export default function Home() {
     })
 
     useEffect(() => {
-        getAlbums()
+        const userInfo = JSON.parse(localStorage?.getItem('userInfo'))
+        const { id } = userInfo
+
+        setUser(userInfo)
+        getAlbums(id)
     }, [])
 
     return (
         <div className={styles.home}>
             <Navbar />
-            <div className={styles.userInfo}>
-                <h3>{name}</h3>
-                <div className={styles.email}>
-                    <FontAwesomeIcon icon={faShare} className={styles.icon} />
-                    <p>{email}</p>
-                </div>
-            </div>
-            <div>
-                {albumsReander}
-            </div>
+            {user ?
+                <>
+                    <div className={styles.userInfo}>
+                        <h3>{user.name}</h3>
+                        <div className={styles.email}>
+                            <FontAwesomeIcon icon={faShare} className={styles.icon} />
+                            <p>{user.email}</p>
+                        </div>
+                    </div>
+                    <div>
+                        {albumsReander}
+                    </div>
+                </>
+                :
+                <div />}
         </div>
     )
 }

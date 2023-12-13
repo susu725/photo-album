@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react'
-import Modal from '../Modal/Modal';
+import Modal from '../Modal/Modal'
 import styles from './Item.module.scss'
 
 export default function Item({ photo }) {
