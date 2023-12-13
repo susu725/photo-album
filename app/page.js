@@ -49,7 +49,7 @@ export default function Login() {
         <p className={styles.noAccount}>Don’t have an account?</p>
         <div className={styles.registerWay}>
           <button><p>Register</p></button>
-          <button><p>Continue with Google</p></button>
+          <button><p>Google</p></button>
         </div>
       </div>
       <Footer />

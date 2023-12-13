@@ -7,3 +7,15 @@
         color: #FFFFFF;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .footer {
+        width: 290px;
+        height: 36px;
+
+        .copyright {
+            font-size: 8px;
+            line-height: 11.38px;
+        }
+    }
+}
