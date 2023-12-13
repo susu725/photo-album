@@ -8,12 +8,13 @@
     position: fixed;
     top: 133px;
     left: 20px;
+    padding: 20px 0px;
     background-color: #111111;
     z-index: 1;
     cursor: auto;
 
     .nav {
-        width: 100%;
+        width: 1840px;
         height: 50px;
         display: flex;
         justify-content: space-between;
@@ -21,22 +22,11 @@
 
         .functionList {
             display: flex;
-        }
-
-        button {
-            display: flex;
-            margin-left: 16px;
-            color: #FFFFFF;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-
-            .icon {
-                width: 20px;
-                height: 20px;
-                margin-left: 10px;
-                color: #FFFFFF;
-            }
+            width: 408px;
+            height: 85px;
+            flex-shrink: 0;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .cross {
@@ -44,7 +34,6 @@
             height: 32px;
             color: #FFFFFF;
         }
-
     }
 
     img {
@@ -52,11 +41,126 @@
         height: 700px;
     }
 
-    .title {
-        width: 100%;
+    .imgInfo {
+        width: 1840px;
         height: 50px;
-        display: inline-block;
-        text-align: left;
+        display: flex;
+        justify-content: space-between;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 19.91px;
+            }
+
+            color: #FFFFFF;
+        }
+
+        .userAction {
+            display: flex;
+            align-items: center;
+
+            button {
+                padding: 10px 16px 10px 20px;
+                border: 1px solid #FFFFFF;
+            }
+        }
+    }
+
+    button {
+        display: flex;
+        margin: 0px 10px;
         color: #FFFFFF;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .modal {
+        width: 320px;
+        height: 631px;
+        top: 49px;
+        left: 0;
+
+        .nav {
+            width: 290px;
+            height: 85px;
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            .functionList {
+                width: 290px;
+                height: 85px;
+            }
+
+            .cross {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        img {
+            width: 290px;
+            height: 373px;
+        }
+
+        .imgInfo {
+            width: 290px;
+            height: 103px;
+            display: flex;
+            flex-direction: column-reverse;
+
+            .title {
+
+                span {
+                    font-size: 12px;
+                    line-height: 17.06px;
+                }
+
+                font-size: 14px;
+                line-height: 19.91px;
+            }
+
+            .userAction {
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    margin-left: 8px;
+                }
+            }
+        }
+
+        button {
+            margin: 0px;
+
+            p {
+                font-size: 14px;
+                line-height: 19.91px;
+            }
+
+            .icon {
+                width: 16px;
+                height: 16px;
+                margin-left: 5px;
+            }
+        }
     }
 }
