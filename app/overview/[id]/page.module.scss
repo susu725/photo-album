@@ -1,11 +1,22 @@
 .overview {
     width: 1920px;
     height: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #111111;
     overflow: scroll;
 
     &::-webkit-scrollbar {
         display: none;
+    }
+
+    h3 {
+        height: 75px;
+        display: flex;
+        align-items: center;
+        padding: 20px 0px 20px 0px;
+        color: #FFFFFF;
     }
 
     .photos {

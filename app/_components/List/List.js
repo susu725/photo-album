@@ -32,7 +32,7 @@ export default function List({ album }) {
 
     return (
         <div className={styles.list}>
-            <Link href={`/overview/${id}`} className={styles.link}>
+            <Link href={{ pathname: `/overview/${id}`, query: { title } }} className={styles.link}>
                 <FontAwesomeIcon icon={far.faBookmark} className={styles.icon} />
                 <p className={styles.title}>{title}</p>
             </Link>
