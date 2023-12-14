@@ -4,7 +4,11 @@
 
     .link {
         padding: 10px 20px 0px 20px;
+        color: #FFFFFF;
         text-decoration: none;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
 
         .icon {
             width: 20px;
@@ -34,9 +38,6 @@
             width: 320px;
             display: inline-block;
             padding: 0px 15px 0px 15px;
-            text-decoration: none;
-            overflow: hidden;
-            white-space: nowrap;
 
             .icon {
                 width: 16px;

@@ -143,6 +143,7 @@ input {
 
 button {
   cursor: pointer;
+  appearance: auto;
 }
 
 h3 {

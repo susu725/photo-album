@@ -15,9 +15,6 @@ export default function Overview() {
     const id = pathname.match(/[0-9]+/);
     const title = params.get("title");
 
-    console.log(1);
-
-
     // 取得該相簿的所有照片
     const getPhotos = async (id) => {
         try {

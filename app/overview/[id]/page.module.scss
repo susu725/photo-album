@@ -16,7 +16,9 @@
         display: flex;
         align-items: center;
         padding: 20px 0px 20px 0px;
+        // text-align: justify;
         color: #FFFFFF;
+        word-break: break-all;
     }
 
     .photos {
@@ -32,6 +34,8 @@
         height: 680px;
 
         h3 {
+            width: 290px;
+            height: 100%;
             font-size: 18px;
             font-weight: 400;
             line-height: 25.59px;
