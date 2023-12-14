@@ -63,9 +63,10 @@
 
         .userAction {
             display: flex;
-            align-items: center;
 
             button {
+                display: flex;
+                align-items: center;
                 padding: 10px 16px 10px 20px;
                 border: 1px solid #FFFFFF;
             }
@@ -108,6 +109,10 @@
             .functionList {
                 width: 290px;
                 height: 85px;
+
+                button {
+                    padding: 0;
+                }
             }
 
             .cross {

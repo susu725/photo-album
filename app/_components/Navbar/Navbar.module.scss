@@ -47,5 +47,9 @@
         width: 320px;
         height: 49px;
         visibility: hidden;
+
+        * {
+            display: none;
+        }
     }
 }
