@@ -16,6 +16,8 @@
     input {
       width: 700px;
       height: 50px;
+      margin-bottom: 20px;
+      padding-left: 10px;
       color: #FFFFFF;
       background-color: transparent;
       border: 1px solid #FFFFFF;
@@ -31,18 +33,17 @@
     .loginBtn {
       width: 700px;
       height: 50px;
-      margin: 20px 0px;
     }
 
     .noAccount {
       color: #FFFFFF;
+      margin: 10px 0px;
     }
 
     .registerWay {
       width: 700px;
       height: 50px;
       display: flex;
-      margin-top: 20px;
 
       button {
         width: 340px;
