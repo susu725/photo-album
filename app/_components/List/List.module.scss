@@ -3,6 +3,7 @@
     overflow: hidden;
 
     .link {
+        display: inline-block;
         padding: 10px 20px 0px 20px;
         color: #FFFFFF;
         text-decoration: none;
@@ -30,13 +31,12 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1880px) {
     .list {
-        width: 320px;
+        width: 100vw;
 
         .link {
-            width: 320px;
-            display: inline-block;
+            width: 100vw;
             padding: 0px 15px 0px 15px;
 
             .icon {
@@ -49,6 +49,21 @@
                 font-size: 14px;
                 line-height: 19.91px;
             }
+        }
+
+        .photos {
+            width: 100vw;
+            padding: 20px 1%;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .list {
+        width: 320px;
+
+        .link {
+            width: 320px;
         }
 
         .photos {

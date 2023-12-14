@@ -1,6 +1,6 @@
 .login {
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,10 +72,43 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1880px) {
   .login {
-    width: 320px;
-    height: 680px;
+
+    .container {
+      input {
+        width: 80%;
+      }
+
+      .loginBtn {
+        width: 80%;
+      }
+
+      .registerWay {
+        width: 80%;
+
+        button {
+
+          &:nth-of-type(2) {
+
+            &::before {
+              font-size: 14px;
+              line-height: 19.91px;
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 19.91px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .login {
 
     .container {
       input {
@@ -108,11 +141,6 @@
           }
         }
       }
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 19.91px;
     }
   }
 }

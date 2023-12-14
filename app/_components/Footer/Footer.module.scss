@@ -1,5 +1,5 @@
 .footer {
-    width: 1880px;
+    width: 100vw;
     height: 54px;
 
     .copyright {
@@ -8,7 +8,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     .footer {
         width: 290px;
         height: 36px;

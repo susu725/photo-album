@@ -33,9 +33,14 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1880px) {
     .navbar {
-        width: 320px;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar {
         height: 49px;
         visibility: hidden;
 

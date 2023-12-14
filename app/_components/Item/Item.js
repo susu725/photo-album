@@ -23,7 +23,7 @@ export default function Item({ photo }) {
         <div className={pathname === "/home" ? styles.homeItem : styles.overviewItem} onClick={handleOpen} >
             <img src={url} alt='#' className={styles.img} />
             {isOpen && (<Modal handleClose={handleClose} photo={photo} />)}
-            <div className={isOpen ? styles.mask : ""} />
+            <div className={isOpen ? styles.mask : ""} onClick={handleClose} />
         </div>
     );
 }

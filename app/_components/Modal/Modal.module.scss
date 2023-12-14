@@ -7,9 +7,10 @@
     align-items: center;
     position: fixed;
     top: 133px;
-    left: 20px;
+    left: 50%;
     padding: 20px 0px;
     background-color: #111111;
+    transform: translateX(-50%);
     z-index: 1;
     cursor: auto;
 
@@ -41,7 +42,7 @@
         }
     }
 
-    img {
+    .img {
         width: 543.52px;
         height: 700px;
     }
@@ -76,22 +77,18 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1880px) {
     .modal {
-        width: 320px;
-        height: 631px;
-        top: 49px;
-        left: 0;
+        width: 80%;
+        height: 90%;
+        justify-content: space-around;
+        top: 91px;
 
         .nav {
-            width: 290px;
-            height: 85px;
-            flex-direction: column-reverse;
-            justify-content: flex-end;
-            align-items: flex-end;
+            width: 95%;
+            height: 10%;
 
             .functionList {
-                width: 290px;
                 height: 85px;
 
                 button {
@@ -105,15 +102,14 @@
             }
         }
 
-        img {
-            width: 290px;
-            height: 373px;
+        .img {
+            width: 40vw;
+            height: 50vh;
         }
 
         .imgInfo {
-            width: 290px;
+            width: 40vw;
             height: 103px;
-            display: flex;
             flex-direction: column-reverse;
 
             .title {
@@ -127,13 +123,44 @@
             }
 
             .userAction {
-                display: flex;
                 justify-content: flex-end;
 
                 button {
-                    margin-left: 8px;
+                    margin: 0px 0px 0px 8px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .modal {
+        width: 320px;
+        height: 631px;
+        top: 49px;
+
+        .nav {
+            width: 290px;
+            height: 85px;
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            .functionList {
+                width: 290px;
+            }
+        }
+
+        .img {
+            width: 290px;
+            height: 373px;
+            margin: 12px 0px;
+        }
+
+        .imgInfo {
+            width: 290px;
+            height: 103px;
+            align-items: stretch;
         }
     }
 }

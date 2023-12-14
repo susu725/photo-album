@@ -22,6 +22,7 @@ export default function Modal({ handleClose, photo }) {
                     <FontAwesomeIcon icon={faXmark} className={styles.cross} />
                 </button>
             </div>
+            {/* <div className={styles.main}> */}
             <img src={url} alt='#' className={styles.img} />
             <div className={styles.imgInfo}>
                 <p className={styles.title}>
@@ -32,7 +33,9 @@ export default function Modal({ handleClose, photo }) {
                     <TitleBtn title='Like' icon={far.faHeart} />
                     <TitleBtn title='Save' icon={far.faBookmark} />
                 </div>
+                {/* </div> */}
             </div>
+
         </div>
     );
 }
