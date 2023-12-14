@@ -18,6 +18,7 @@
     }
 
     .photos {
+        width: 1920px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -31,12 +32,15 @@
         h3 {
             width: 80vw;
         }
+
+        .photos {
+            width: 100vw
+        }
     }
 }
 
 @media screen and (max-width: 768px) {
     .overview {
-
 
         h3 {
             padding: 0px;
