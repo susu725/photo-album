@@ -1,24 +1,24 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass, faPlus, faBell } from '@fortawesome/free-solid-svg-icons'
-import styles from './Navbar.module.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass, faPlus, faBell } from "@fortawesome/free-solid-svg-icons";
+import { TitleBtn } from "../Btn/Btn";
+import styles from "./Navbar.module.scss";
+
+export const Btn = ({ icon }) => {
+    return (
+        <button className={styles.btn}>
+            <FontAwesomeIcon icon={icon} className={styles.icon} />
+        </button>
+    );
+};
 
 export default function Navbar() {
     return (
         <div className={styles.navbar}>
-            <div>
-                <button className={styles.search}>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} />
-                </button>
-            </div>
+            <Btn icon={faMagnifyingGlass} />
             <div className={styles.functionList}>
-                <button className={styles.plus}>
-                    <p>Submit a photo</p>
-                    <FontAwesomeIcon icon={faPlus} className={styles.icon} />
-                </button>
-                <button className={styles.notify}>
-                    <FontAwesomeIcon icon={faBell} className={styles.icon} />
-                </button>
+                <TitleBtn title='Submit a photo' icon={faPlus} />
+                <Btn icon={faBell} />
             </div>
         </div>
-    )
+    );
 }

@@ -1,42 +1,42 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import Footer from './_components/Footer/Footer'
-import styles from './page.module.scss'
-import { getUsersApi } from './api/api'
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import Footer from "./_components/Footer/Footer";
+import styles from "./page.module.scss";
+import { getUsersApi } from "./api/api";
 
 export default function Login() {
-  const [users, setUsers] = useState(null)
-  const [userId, setUserId] = useState(null)
-  const router = useRouter()
+  const [users, setUsers] = useState(null);
+  const [userId, setUserId] = useState(null);
+  const router = useRouter();
 
   const handleInput = e => {
-    setUserId(e.target.value)
-  }
+    setUserId(e.target.value);
+  };
 
   const handleLogin = () => {
     users.map(user => {
       if (user.id === Number(userId)) {
-        localStorage.setItem('userInfo', JSON.stringify(user))
-        router.push('/home')
+        localStorage.setItem("userInfo", JSON.stringify(user));
+        router.push("/home");
       }
-    })
-  }
+    });
+  };
 
   // 取得所有使用者資料
   const getUsers = async () => {
     try {
-      const users = await getUsersApi()
-      setUsers(users)
+      const users = await getUsersApi();
+      setUsers(users);
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-  }
+  };
 
   useEffect(() => {
-    getUsers()
-  }, [])
+    getUsers();
+  }, []);
 
   return (
     <div className={styles.login}>
@@ -54,5 +54,5 @@ export default function Login() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }

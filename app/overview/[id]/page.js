@@ -1,37 +1,40 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react'
-import { usePathname, useSearchParams } from 'next/navigation'
-import Navbar from '@/app/_components/Navbar/Navbar'
-import Item from '../../_components/Item/Item'
-import styles from './page.module.scss'
-import { getPhotosApi } from '@/app/api/api'
+import { useEffect, useState } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import Navbar from "@/app/_components/Navbar/Navbar";
+import Item from "../../_components/Item/Item";
+import styles from "./page.module.scss";
+import { getPhotosApi } from "@/app/api/api";
 
 export default function Overview() {
-    const [photos, setPhotos] = useState(null)
-    const pathname = usePathname()
-    const params = useSearchParams()
+    const [photos, setPhotos] = useState(null);
+    const pathname = usePathname();
+    const params = useSearchParams();
 
-    const id = pathname.match(/[0-9]+/)
-    const title = params.get('title')
+    const id = pathname.match(/[0-9]+/);
+    const title = params.get("title");
+
+    console.log(1);
+
 
     // 取得該相簿的所有照片
     const getPhotos = async (id) => {
         try {
-            const photos = await getPhotosApi(id)
-            setPhotos(photos)
+            const photos = await getPhotosApi(id);
+            setPhotos(photos);
         } catch (err) {
-            console.log(err)
+            console.log(err);
         }
-    }
+    };
 
     const photosReander = photos?.map(photo => {
-        return <Item key={photo.id} photo={photo} />
-    })
+        return <Item key={photo.id} photo={photo} />;
+    });
 
     useEffect(() => {
-        getPhotos(id)
-    }, [])
+        getPhotos(id);
+    }, []);
 
     return (
         <div className={styles.overview}>
@@ -41,5 +44,5 @@ export default function Overview() {
                 {photosReander}
             </div>
         </div>
-    )
+    );
 }

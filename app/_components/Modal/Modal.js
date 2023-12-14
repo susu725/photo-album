@@ -1,30 +1,22 @@
-'use client';
+"use client";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { faDownload, faShare, faCircleInfo, faXmark } from '@fortawesome/free-solid-svg-icons'
-import styles from './Modal.module.scss'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { faDownload, faShare, faCircleInfo, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { TitleBtn } from "../Btn/Btn";
+import styles from "./Modal.module.scss";
 
 export default function Modal({ handleClose, photo }) {
-    const { id, title, url } = photo
+    const { title, url } = photo;
 
     return (
         <div className={styles.modal}>
             <div className={styles.nav}>
                 <div />
                 <div className={styles.functionList}>
-                    <button>
-                        <p>Download</p>
-                        <FontAwesomeIcon icon={faDownload} className={styles.icon} />
-                    </button>
-                    <button>
-                        <p>Share</p>
-                        <FontAwesomeIcon icon={faShare} className={styles.icon} />
-                    </button>
-                    <button>
-                        <p>Info</p>
-                        <FontAwesomeIcon icon={faCircleInfo} className={styles.icon} />
-                    </button>
+                    <TitleBtn title='Download' icon={faDownload} />
+                    <TitleBtn title='Share' icon={faShare} />
+                    <TitleBtn title='Info' icon={faCircleInfo} />
                 </div>
                 <button onClick={handleClose}>
                     <FontAwesomeIcon icon={faXmark} className={styles.cross} />
@@ -37,16 +29,10 @@ export default function Modal({ handleClose, photo }) {
                     {title}
                 </p>
                 <div className={styles.userAction}>
-                    <button>
-                        <p>Like</p>
-                        <FontAwesomeIcon icon={far.faHeart} className={styles.icon} />
-                    </button>
-                    <button>
-                        <p>Save</p>
-                        <FontAwesomeIcon icon={far.faBookmark} className={styles.icon} />
-                    </button>
+                    <TitleBtn title='Like' icon={far.faHeart} />
+                    <TitleBtn title='Save' icon={far.faBookmark} />
                 </div>
             </div>
         </div>
-    )
+    );
 }
